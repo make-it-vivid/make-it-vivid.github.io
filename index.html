@@ -1,1 +1,404 @@
-hello world!
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Make-It-Vivid: Dressing Your Animatable Biped Cartoon Characters from Text">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make-It-Vivid: Dressing Your Animatable Biped Cartoon Characters from Text</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Make-It-3D: High-Fidelity 3D Creation from A Single Image with Diffusion Prior</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://junshutang.github.io/">Junshu Tang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://zengyh1900.github.io/">Yanhong Zeng</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Ke_Fan2">Ke Fan</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Xuheng_Wang1">Xuheng Wang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://daibo.info/">Bo Dai</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://dmcv.sjtu.edu.cn/people/">Lizhuang Ma</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chenkai.site/">Kai Chen</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>
+            <span class="author-block"><sup>2</sup>Shanghai AI Lab,</span>
+            <span class="author-block"><sup>3</sup>Tsinghua University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://make-it-vivid.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://make-it-vivid.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://make-it-vivid.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://make-it-vivid.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+<!--       <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Make-It-3D</span> can create high-fidelity 3D content from only a single image.
+      </h2> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-chair-tp">
+            <div class="content has-text-centered">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+    </div>
+        <div class="item item-shiba">
+            <div class="content has-text-centered">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+    </div>
+        <div class="item item-fullbody">
+            <div class="content has-text-centered">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-blueshirt">
+            <div class="content has-text-centered">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo5">
+            <div class="content has-text-centered">
+          <video poster="" id="demo5" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo6">
+            <div class="content has-text-centered">
+          <video poster="" id="demo6" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo7">
+            <div class="content has-text-centered">
+          <video poster="" id="demo7" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo7.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo8">
+            <div class="content has-text-centered">
+          <video poster="" id="demo8" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo9">
+            <div class="content has-text-centered">
+          <video poster="" id="demo9" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo10">
+            <div class="content has-text-centered">
+          <video poster="" id="demo10" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo10.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo11">
+            <div class="content has-text-centered">
+          <video poster="" id="demo11" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo11.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo12">
+            <div class="content has-text-centered">
+          <video poster="" id="demo12" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo12.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo13">
+            <div class="content has-text-centered">
+          <video poster="" id="demo13" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo13.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo14">
+            <div class="content has-text-centered">
+          <video poster="" id="demo14" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo14.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <div class="item item-demo15">
+            <div class="content has-text-centered">
+          <video poster="" id="demo15" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo15.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Creating and animating 3D biped cartoon characters is crucial and valuable in various applications. 
+            Compared with geometry, the diverse texture design plays an important role in making 3D biped cartoon characters vivid and charming. 
+            Therefore, we focus on automatic texture design for cartoon characters based on input instructions. 
+            This is challenging for domain-specific requirements and a lack of high-quality data. 
+            To address this challenge, we propose Make-It-Vivid, the first attempt to enable high-quality texture generation from text in UV space. 
+            We prepare a detailed text-texture paired data for 3D characters by using vision-question-answering agents. 
+            Then we customize a pretrained text-to-image model to generate texture map with template structure while preserving the natural 2D image knowledge. 
+            Furthermore, to enhance fine-grained details, we propose a novel adversarial learning scheme to shorten the domain gap between original dataset and realistic texture domain. 
+            Extensive experiments show that our approach outperforms current texture generation methods, resulting in efficient character texturing and faithful generation with prompts. 
+            Besides, we showcase various applications such as out of domain generation and texture stylization. 
+            We also provide an efficient generation system for automatic text-guided textured character generation and animation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div>
+</section>
+<section class="section">
+    <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline</h2>
+        <div class="content has-text-justified">
+        <p>
+            Our method takes a pair of data as input including a texture map, corresponding text description P and mesh model M. 
+            We finetune the low-rank adaptor ∆θ for pretrained text-to-image diffusion model to generate high quality UV texture. 
+            In order to improve the quality and perceptual fidelity of synthetic textures, we introduce adversarial training to enhance the texture details. 
+            We leverage synthetic plausible images conditioned by the rendered depth generated by ControlNet as a proxy to guide this adversarial training. 
+        </p>
+        <div>
+            <img src="./static/images/pipeline.jpg" alt="method" class="center">
+          </div>
+          </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Diverse Text-to-3D</h2>
+          <div class="content has-text-justified">
+            <p>
+            <span class="dnerf">Make-It-3D</span> can generate diverse and visually stunning 3D models given a text description.
+            </p>
+        </div>
+          <video poster="" id="" autoplay controls muted loop height="100%">
+            <source src="./static/videos/diverse.mp4"
+                    type="video/mp4">
+        </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Texture Modification</h2>
+          <div class="content has-text-justified">
+            <p>
+            <span class="dnerf">Make-It-3D</span> achieves 3D-aware texture modification such as tattoo drawing and stylization.
+            </p>
+        </div>
+          <video poster="" id="" autoplay controls muted loop height="100%">
+            <source src="./static/videos/edit.mp4"
+                    type="video/mp4">
+        </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{tang2023makeit3d,
+        title={Make-It-3D: High-Fidelity 3D Creation from A Single Image with Diffusion Prior}, 
+        author={Junshu Tang and Tengfei Wang and Bo Zhang and Ting Zhang and Ran Yi and Lizhuang Ma and Dong Chen},
+        year={2023},
+        eprint={2303.14184},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+  }
+  </code></pre>
+    </div>
+  </section>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              The website code is borrowed from the <a
+                href="https://github.com/nerfies/nerfies.github.io">source code</a> of Nerfies. We thank the authors for sharing the templates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
